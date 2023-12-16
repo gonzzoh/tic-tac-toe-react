@@ -1,0 +1,25 @@
+#gameBoard {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cell {
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: red;
+  font-weight: bold;
+}
+
+.cell:disabled {
+  opacity: 1;
+}

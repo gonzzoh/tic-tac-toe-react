@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Board from './board'
+import Board from './Board'
 function App() {
   const [name, setName] = useState('');
 
@@ -18,11 +18,11 @@ function App() {
     const newVal = e.target.value;
     setName(prev => prev = newVal)
     
-    if (e.target.value === player1) {
-        setPlayer1(e.target.value);
-    } else if (e.target.value === player2) {
-        setPlayer2(e.target.value);
-    }
+    // if (e.target.value === player1) {
+    //     setPlayer1(e.target.value);
+    // } else if (e.target.value === player2) {
+    //     setPlayer2(e.target.value);
+    // }
 
     console.log(newVal)
   }
@@ -32,8 +32,8 @@ function App() {
       <form onSubmit={handleControlledSubmit}>
         <label htmlFor="name"></label>
         <select>
-          <option value="player1">{player1}: X</option>
-          <option value="player2">{player2}: O</option>
+          <option value="player1">X: {player1}</option>
+          <option value="player2">O: {player2}</option>
         </select>
         <input id="name" value={name} onChange={handleChange}
         />
